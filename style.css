@@ -1,0 +1,110 @@
+body {
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    padding-top: 40px;
+    background: linear-gradient(120deg, #e3fdfd, #cbf1f5, #a6e3e9);
+    animation: bgShift 10s infinite alternate;
+}
+
+@keyframes bgShift {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #034C5F;
+}
+
+.scoreboard p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.choice {
+    padding: 18px;
+    font-size: 35px;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.4s;
+}
+
+.choice:hover {
+    transform: scale(1.15);
+}
+
+.active {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #0005;
+}
+
+/* Glow effects */
+.win-glow {
+    box-shadow: 0 0 30px 10px green;
+}
+.lose-glow {
+    box-shadow: 0 0 30px 10px red;
+}
+.tie-glow {
+    box-shadow: 0 0 30px 10px orange;
+}
+
+/* Progress Bar */
+.progress-bar {
+    margin: 25px auto;
+    width: 250px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background: #006778;
+    transition: width 0.5s;
+}
+
+.display {
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 27px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.win { color: green; }
+.lose { color: red; }
+.tie { color: orange; }
+
+.reset {
+    margin-top: 35px;
+    padding: 12px 28px;
+    font-size: 18px;
+    border: none;
+    background: #034C5F;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+.reset:hover {
+    opacity: 0.8;
+}
